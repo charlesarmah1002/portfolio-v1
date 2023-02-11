@@ -42,7 +42,7 @@
                 <img src="assets/img/charlesarmah.dev/profile-image.png" alt="charlesarmah.dev">
             </div>
             <div class="content">
-                <h2 class="title">Hi there, <span class="element">I'm Wesley</span></h2>
+                <h4 class="title"><span class="element"></span></h4>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae veniam aspernatur libero, quod omnis sunt consequatur impedit dolores reiciendis quidem incidunt, aperiam deleniti odit voluptatem.</p>
                 <div class="socials">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -63,14 +63,13 @@
     <!-- typed js scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        import Typed from 'typed.js';
-
-        var options = {
-        strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
-        typeSpeed: 40
-        };
-
-        var typed = new Typed('.element', options);
+        var typed = new Typed('.element', {
+        strings: ["Kore wa Chāruzudesu"],
+        typeSpeed: 60,
+        backSpeed: 60,
+        smartBackspace: false,
+        loop: false
+        }); 
     </script>
 </body>
 </html>
