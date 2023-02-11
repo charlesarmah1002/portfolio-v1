@@ -141,6 +141,7 @@ nav.main .search-bar button {
 @media screen and (max-width: 850px){
     nav.main {
         padding: 0 20px;
+        height: 70px;
     }
     .menu {
         position: absolute;
