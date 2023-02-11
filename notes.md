@@ -1,0 +1,2 @@
+# thinking about having a picture of me on the right and then the initial text on the left
+# the opening title would be my name with the typed js but the text under is a different story all together but no matter it's not like I don't end figuring things out as time goes on. I also have to start making everything of mine look like a pro dev instead of just doing stuff any how

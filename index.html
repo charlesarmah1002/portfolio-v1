@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="assets/font-awesome/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/all.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/brands.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/solid.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/regular.css">
+
+    <title>charlesarmah.dev</title>
+</head>
+<body>
+    <header>
+        <!-- navigation for pc and devices with width above 900px -->
+        <nav class="main">
+            <!-- name -->
+            <a href="#" class="logo">charlesarmah.dev</a>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="menu">
+                <li class="menu-item"><a href="#">Home</a></li>
+                <li class="menu-item"><a href="#">Products & Services</a></li>
+                <li class="menu-item"><a href="#">Portfolio</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="image-container">
+                <img src="assets/img/charlesarmah.dev/profile-image.png" alt="charlesarmah.dev">
+            </div>
+            <div class="content">
+                <h2 class="title">Hi there, <span class="element">I'm Wesley</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae veniam aspernatur libero, quod omnis sunt consequatur impedit dolores reiciendis quidem incidunt, aperiam deleniti odit voluptatem.</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- menu btuton script -->
+    <script src="js/dropdown.js"></script>
+
+    <!-- typed js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        import Typed from 'typed.js';
+
+        var options = {
+        strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+        typeSpeed: 40
+        };
+
+        var typed = new Typed('.element', options);
+    </script>
+</body>
+</html>

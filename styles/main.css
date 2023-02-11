@@ -1,0 +1,276 @@
+:root {
+    /* colors */
+    --rich-black: #023c40;
+    --dark-jungle-green: #092324;
+    --white: #fcfcfc;
+    --blue-crayola: #7C9EB2;
+    --sizzling-red: #ff495c;
+    --pale-dogwood: #CCB7AE70;
+    --off-white: #f4f1f6;
+    --off-white-point7: #f4f1f670;
+}
+
+/* FONTS */
+@font-face {
+    font-family: Cairo;
+    src: url(../assets/fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf);
+}
+@font-face {
+    font-family: montserrat;
+    src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: secular-one;
+    src: url(../assets/fonts/Secular_One/SecularOne-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* main view */
+body {
+    min-height: 130vh;
+    background: var(--off-white);
+    cursor: default;
+    font-family: montserrat, sans-serif;
+    width: 100%;
+    overflow: hidden;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    flex-direction: column;
+    border-bottom: 1px solid;
+    position: sticky;
+    top: 0;
+    background: var(--off-white-point7);
+    backdrop-filter: blur(10px);
+}
+
+/* main navigation */
+nav.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: sticky;
+    top: 0;
+    height: 100px;
+}
+.logo {
+    color: var(--dark-jungle-green);
+    text-decoration: none;
+    font-family: secular-one, sans-serif;
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+.logo:hover {
+    color: var(--sizzling-red);
+}
+nav.main .menu li{
+    display: inline;
+    text-transform: capitalize;
+}
+nav.main .menu li a{
+    padding: 15px 10px;
+    margin: auto 10px;
+    font-family: montserrat, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: inherit;
+    transition: 0.3s;
+    border-radius: 5px;
+    position: relative;
+}
+nav.main .menu li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--dark-jungle-green);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+nav.main .menu li a:hover {
+    background: var(--pale-dogwood);
+}
+nav.main .menu li a:hover::after {
+    width: 100%;
+}
+nav.main .search-bar {
+    width: 200px;
+    overflow: hidden;
+    height: 30px;
+    background: var(--dark-jungle-green);
+    border-radius: 10px;
+    border: 2px solid;
+    position: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav.main .search-bar input[type=search]{
+    width: 170px;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 5px;
+    background: var(--off-white);
+}
+nav.main .search-bar button {
+    background: transparent;
+    color: var(--white);
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 20px;
+    cursor: pointer;
+}
+
+/* for smaller views setting initial breakpoint at 850px*/
+@media screen and (max-width: 850px){
+    .menu {
+        position: absolute;
+        top: -500%;
+        display: grid;
+        left: 0;
+        width: 100%;
+        background: #0d0d0d;
+        color: var(--off-white);
+        padding: 30px 0;
+        transition: all 0.4s ease-in-out;
+        grid-template-columns: auto;
+        text-align: center;
+        padding: 0;
+        opacity: 0;
+    }
+    .drop-active {
+        top: 100%;
+        opacity: 1;
+    }
+    .menu li {
+        margin: 10px auto;
+        width: 100%;
+        line-height: 50px;
+        transition: 0.3s;
+    }
+    .menu li:hover {
+        background: var(--off-white);
+        color: var(--dark-jungle-green);
+    }
+    nav.main .menu li a{
+        padding: 15px 10px;
+        margin: auto 10px;
+        font-family: montserrat, sans-serif;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: inherit;
+        transition: 0.3s;
+        border-radius: 5px;
+        position: relative;
+        width: 100%;
+    }
+    nav.main .menu li a::after {
+        content: '';
+        width: 0;
+    }
+    nav.main .menu li a:hover {
+        background: transparent;
+    }
+    nav.main .menu li a:hover::after {
+        width: 0;
+    }
+
+    /* menu button and toggle active transition */
+    .menu-toggle {
+        width: fit-content;
+        height: fit-content;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+    }
+    .bar {
+        width: 30px;
+        height: 3px;
+        background: var(--dark-jungle-green);
+        border-radius: 10px;
+        display: block;
+        margin: 6px auto;
+        transition: all ease-in-out 0.4s;
+    }
+    .toggle-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .toggle-active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+    }
+    .toggle-active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+
+/* hero section */
+section.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
+}
+section.hero .image-container {
+    width: 80%;
+    max-height: 400px;
+    max-width: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+section.hero .image-container img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+section.hero .content {
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+section.hero .content h2 {
+    font-size: 2rem;
+}
+section.hero .content p {
+    margin: 20px auto;
+    font-size: 1.1rem;
+}
+section.hero .content .socials {
+    font-size: 2rem;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+section.hero .content .socials a {
+    color: var(--dark-jungle-green);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+section.hero .content .socials a:hover {
+    opacity: 1;
+}
