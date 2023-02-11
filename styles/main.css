@@ -46,7 +46,7 @@ header {
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 100px;
+    height: fit-content;
     flex-direction: column;
     border-bottom: 1px solid;
     position: sticky;
@@ -141,7 +141,7 @@ nav.main .search-bar button {
 @media screen and (max-width: 850px){
     nav.main {
         padding: 0 10px;
-        height: 50px;
+        height: 7vh;
     }
     .menu {
         position: absolute;
