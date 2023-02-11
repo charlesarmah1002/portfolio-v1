@@ -82,7 +82,7 @@ nav.main .menu li{
 }
 nav.main .menu li a{
     padding: 15px 10px;
-    margin: auto 10px;
+    margin-left: 10px;
     font-family: montserrat, sans-serif;
     text-decoration: none;
     text-transform: capitalize;
