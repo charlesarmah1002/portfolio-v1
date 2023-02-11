@@ -140,7 +140,7 @@ nav.main .search-bar button {
 /* for smaller views setting initial breakpoint at 850px*/
 @media screen and (max-width: 850px){
     nav.main {
-        padding: 0 20px;
+        padding: 0 10px;
         height: 70px;
     }
     .menu {
