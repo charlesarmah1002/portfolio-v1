@@ -35,10 +35,7 @@
 body {
     min-height: 130vh;
     background: var(--off-white);
-    cursor: default;
     font-family: montserrat, sans-serif;
-    width: 100%;
-    overflow: hidden;
 }
 header {
     display: flex;
@@ -46,7 +43,7 @@ header {
     justify-content: center;
     position: relative;
     width: 100%;
-    height: fit-content;
+    height: 100px;
     flex-direction: column;
     border-bottom: 1px solid;
     position: sticky;
@@ -62,140 +59,59 @@ nav.main {
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    position: sticky;
+    position: sticky;  
     top: 0;
-    height: 100px;
+    height: 100%;
 }
 .logo {
     color: var(--dark-jungle-green);
     text-decoration: none;
     font-family: secular-one, sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     transition: 0.5s;
 }
 .logo:hover {
     color: var(--sizzling-red);
 }
-nav.main .menu li{
-    display: inline;
-    text-transform: capitalize;
-}
-nav.main .menu li a{
-    padding: 15px 10px;
-    margin-left: 10px;
+nav.main .menu .menu-item {
     font-family: montserrat, sans-serif;
-    text-decoration: none;
     text-transform: capitalize;
-    color: inherit;
-    transition: 0.3s;
-    border-radius: 5px;
+    text-decoration: none;
+    color: var(--dark-jungle-green);
+    margin-left: 10px;
+    padding: 15px 10px;
+    transition: 0.4s;
     position: relative;
 }
-nav.main .menu li a::after {
-    content: '';
+nav.main .menu .menu-item::before {
     width: 0;
     height: 3px;
+    content: '';
     background: var(--dark-jungle-green);
-    position: absolute;
-    left: 0;
     bottom: 0;
-    transition: 0.3s;
-    border-radius: 5px;
+    left: 0;
+    position: absolute;
+    transition: 0.4s;
 }
-nav.main .menu li a:hover {
-    background: var(--pale-dogwood);
-}
-nav.main .menu li a:hover::after {
+nav.main .menu .menu-item:hover::before {
     width: 100%;
 }
-nav.main .search-bar {
-    width: 200px;
-    overflow: hidden;
-    height: 30px;
-    background: var(--dark-jungle-green);
-    border-radius: 10px;
-    border: 2px solid;
-    position: flex;
-    align-items: center;
-    justify-content: center;
+nav.main .menu .menu-item:hover {
+    background: var(--pale-dogwood);
 }
-nav.main .search-bar input[type=search]{
-    width: 170px;
-    height: 100%;
-    outline: none;
-    border: none;
-    padding: 5px;
-    background: var(--off-white);
-}
-nav.main .search-bar button {
-    background: transparent;
-    color: var(--white);
-    outline: none;
-    border: none;
-    height: 100%;
-    width: 20px;
-    cursor: pointer;
-}
-
-/* for smaller views setting initial breakpoint at 850px*/
-@media screen and (max-width: 850px){
+@media screen and (max-width: 900px) {
     nav.main {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 800px) {
+    header {
+        height: 70px;
+    }
+    nav.main{
         padding: 0 10px;
-        height: 7vh;
-    }
-    .menu {
-        position: absolute;
-        top: -500%;
-        display: grid;
-        left: 0;
-        width: 100%;
-        background: #0d0d0d;
-        color: var(--off-white);
-        padding: 30px 0;
-        transition: all 0.4s ease-in-out;
-        grid-template-columns: auto;
-        text-align: center;
-        padding: 0;
-        opacity: 0;
-    }
-    .drop-active {
-        top: 100%;
-        opacity: 1;
-    }
-    .menu li {
-        margin: 10px auto;
-        width: 100%;
-        line-height: 50px;
-        transition: 0.3s;
-    }
-    .menu li:hover {
-        background: var(--off-white);
-        color: var(--dark-jungle-green);
-    }
-    nav.main .menu li a{
-        padding: 15px 10px;
-        margin: auto 10px;
-        font-family: montserrat, sans-serif;
-        text-decoration: none;
-        text-transform: capitalize;
-        color: inherit;
-        transition: 0.3s;
-        border-radius: 5px;
         position: relative;
-        width: 100%;
     }
-    nav.main .menu li a::after {
-        content: '';
-        width: 0;
-    }
-    nav.main .menu li a:hover {
-        background: transparent;
-    }
-    nav.main .menu li a:hover::after {
-        width: 0;
-    }
-
-    /* menu button and toggle active transition */
     .menu-toggle {
         width: fit-content;
         height: fit-content;
@@ -220,6 +136,33 @@ nav.main .search-bar button {
     }
     .toggle-active .bar:nth-child(3){
         transform: translateY(-9px) rotate(-45deg);
+    }
+    nav.main .menu {
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        display: grid;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        background: var(--dark-jungle-green);
+        transition: 0.5s;
+    }
+    nav.main .drop-active {
+        top: 100%;
+        opacity: 1;
+    }
+    nav.main .menu .menu-item {
+        margin: 0;
+        color: var(--off-white);
+        letter-spacing: 3px;
+        padding: 20px 0;
+    }
+    nav.main .menu .menu-item:hover {
+        background: var(--sizzling-red);
+    }
+    nav.main .menu .menu-item::before{
+        display: none;
     }
 }
 
