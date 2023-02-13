@@ -27,14 +27,14 @@
                 <span class="bar"></span>
             </div>
             <div class="menu">
-                <a href="#" class="menu-item">home</a>
-                <a href="#" class="menu-item">products & services</a>
-                <a href="#" class="menu-item">portfolio</a>
-                <a href="#" class="menu-item">contact</a>
+                <a href="#" class="menu-item" onclick="menuShut()">home</a>
+                <a href="#" class="menu-item" onclick="menuShut()">services</a>
+                <a href="#" class="menu-item" onclick="menuShut()">portfolio</a>
+                <a href="#" class="menu-item" onclick="menuShut()">contact</a>
             </div>
         </nav>
     </header>
-    <main>
+    <main onclick="menuShut()">
         <section class="hero">
             <div class="image-container">
                 <img src="assets/img/charlesarmah.dev/profile-image.png" alt="charlesarmah.dev">
@@ -51,6 +51,44 @@
                 </div>
             </div>
         </section>
+        <section class="services">
+            <h4 class="title">What Can I Do?</h4>
+            <div class="card-section">
+                <!-- web design -->
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-globe"></i></div>
+                    <div class="description">
+                        <h5 class="des-title">web design</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores dolor magnam, impedit debitis mollitia explicabo?</p>
+                        <a href="#">learn more &rarr;</a>
+                    </div>
+                </div>
+                <!-- social media networking -->
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fas fas fa-server"></i></div>
+                    <div class="description">
+                        <h5 class="des-title">web hosting</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores dolor magnam, impedit debitis mollitia explicabo?</p>
+                        <a href="#">learn more &rarr;</a>
+                    </div>
+                </div>
+                <!-- graphic design -->
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-mouse-pointer"></i></div>
+                    <div class="description">
+                        <h5 class="des-title">graphic design</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores dolor magnam, impedit debitis mollitia explicabo?</p>
+                        <a href="#">learn more &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- the portfolio section -->
+        <section class="portfolio"></section>
+
+        <section class="contact">
+
+        </section>
     </main>
 
 
@@ -63,7 +101,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typed = new Typed('.element', {
-        strings: ["Hi there, this is Wesley 👋🏽"],
+        strings: ["Hi there, this is Wesley 👋"],
         typeSpeed: 60,
         backSpeed: 60,
         smartBackspace: false,
