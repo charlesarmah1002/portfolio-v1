@@ -29,14 +29,15 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 /* main view */
 body {
-    min-height: 130vh;
     background: var(--off-white);
     font-family: montserrat, sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
 }
 header {
     display: flex;
@@ -105,6 +106,9 @@ nav.main .menu .menu-item:hover::before {
     }
 }
 @media screen and (max-width: 800px) {
+    * {
+        scroll-padding-top: 70px;
+    }
     header {
         height: 70px;
     }
@@ -174,6 +178,7 @@ section.hero {
     justify-content: center;
     flex-wrap: wrap;
     padding: 0 30px;
+    width: 100%;
 }
 section.hero .image-container {
     width: 80%;
@@ -190,7 +195,7 @@ section.hero .image-container img {
     object-position: center;
 }
 section.hero .content {
-    width: 80%;
+    width: 100%;
     max-width: 400px;
     display: flex;
     flex-direction: column;
@@ -246,20 +251,22 @@ section.services .card-section {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 20px;
+    padding: 0 20px;
 }
 section.services .card-section .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 250px;
-    margin: 20px;
-    padding: 20px;
+    justify-content: space-between;
+    width: 300px;
+    margin: 30px 20px;
+    padding: 10px;
     text-align: center;
     background: var(--off-white-point7);
     backdrop-filter: blur(10px);
     border-radius: 10px;
+    transition: 0.4s;
+    cursor: default;
 }
 section.services .card-section .card .icon {
     font-size: 3rem;
@@ -270,10 +277,74 @@ section.services .card-section .card .icon {
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid;
-    margin-bottom: 10px;
+}
+section.services .card-section .card .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 10px 0;
+    font-size: 1.1rem;
 }
 section.services .card-section .card .description .des-title {
     font-size: 1.1rem;
     margin: 5px;
     text-transform: uppercase;
+}
+section.services .card-section .card .description p {
+    margin: 10px 0;
+}
+section.services .card-section .card .description a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+section.services .card-section .card .description a:hover {
+    text-decoration: underline;
+}
+section.services .card-section .card:hover {
+    scale: 1.1;
+}
+
+/* portfolio section */
+section.portfolio {
+    min-height: 70vh;
+}
+
+/* contact section */
+section.contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--rich-black);
+    padding: 30px 0;
+    color: var(--off-white);
+    flex-direction: column;
+} 
+section.contacts a {
+    color: var(--white);
+    text-decoration: none;
+}
+section.contacts .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+section.contacts .container .col {
+    padding: 10px;
+    margin: 10px;
+    width: 95%;
+    max-width: 300px;
+    background: var(--off-white-point7);
+    border-radius: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+section.contacts .container .col i {
+    padding-right: 5px;
+    margin-right: 10px;
+    height: 100%;
 }

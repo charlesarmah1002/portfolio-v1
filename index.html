@@ -28,9 +28,9 @@
             </div>
             <div class="menu">
                 <a href="#" class="menu-item" onclick="menuShut()">home</a>
-                <a href="#" class="menu-item" onclick="menuShut()">services</a>
-                <a href="#" class="menu-item" onclick="menuShut()">portfolio</a>
-                <a href="#" class="menu-item" onclick="menuShut()">contact</a>
+                <a href="#services" class="menu-item" onclick="menuShut()">services</a>
+                <a href="#portfolio" class="menu-item" onclick="menuShut()">portfolio</a>
+                <a href="#contacts" class="menu-item" onclick="menuShut()">contact</a>
             </div>
         </nav>
     </header>
@@ -40,18 +40,16 @@
                 <img src="assets/img/charlesarmah.dev/profile-image.png" alt="charlesarmah.dev">
             </div>
             <div class="content">
-                <h4 class="title"><span class="element"></span></h4>
+                <h2 class="title"><span class="element"></span></h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae veniam aspernatur libero, quod omnis sunt consequatur impedit dolores reiciendis quidem incidunt, aperiam deleniti odit voluptatem.</p>
                 <div class="socials">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section class="services" id="services">
             <h4 class="title">What Can I Do?</h4>
             <div class="card-section">
                 <!-- web design -->
@@ -68,7 +66,7 @@
                     <div class="icon"><i class="fa-solid fas fas fa-server"></i></div>
                     <div class="description">
                         <h5 class="des-title">web hosting</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores dolor magnam, impedit debitis mollitia explicabo?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores dolor magnam, impedit debitis mollitia explicabo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos iusto veniam atque id veritatis ducimus voluptates numquam asperiores, vero vitae?</p>
                         <a href="#">learn more &rarr;</a>
                     </div>
                 </div>
@@ -84,10 +82,28 @@
             </div>
         </section>
         <!-- the portfolio section -->
-        <section class="portfolio"></section>
-
-        <section class="contact">
-
+        <section class="portfolio">
+            <div class="section-title">featured photos</div>
+            <div class="container">
+                <div class="image-container">
+                    <img src="assets/img/Log In Screen — Mozilla Firefox 21_01_2023 21_53_17 (2).png" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/Screenshot 2023-01-24 at 18-33-12 Choir Sign Up.png" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="assets/img/" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+            <a href="#" class="logo">charlesarmah.dev</a>
+            <div class="container">
+                <a href="#" class="col"><i class="fa-solid fa-phone"></i> +233 54 970 8561</a>
+                <a href="#" class="col"><i class="fa-solid fa-envelope"></i> charlesarmah.dev@gmail.com</a>
+                <a href="#" class="col"><i class="fa-brands fa-telegram"></i> a_charles_wesley</a>
+                <a href="#" class="col"><i class="fa-brands fa-whatsapp"></i> +233 50 222 8682</a>
+            </div>
         </section>
     </main>
 
@@ -101,7 +117,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typed = new Typed('.element', {
-        strings: ["Hi there, this is Wesley 👋"],
+        strings: ["Hi there, I'm a web designer"],
         typeSpeed: 60,
         backSpeed: 60,
         smartBackspace: false,
